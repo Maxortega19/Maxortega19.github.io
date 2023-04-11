@@ -1,20 +1,370 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Maxi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/parallax.css">
 </head>
+
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>Sobre Mí</li>
-                <li></li>
-                <li></li>
-            </ul>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/images/logo.svg" class="img-logo" alt="Imagen Logo">
+                <h1 class="name-logo"> MAXIMILIANO / ORTEGA</h1>
+            </div>
+            <div class="social-icons">
+                <a href="https://github.com/Maxortega19" target="_blank"><i class="fa-brands fa-github"></i> </a>
+                <a href="https://www.linkedin.com/in/maxiortega/" target="_blank"><i class="fa-brands fa-linkedin"></i>
+                    <a href="https://www.instagram.com/maxi.ortega/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i> </a>
+                </a>
+            </div>
         </nav>
+        <div class="footer-down">
+            <p>Scroll down</p>
+            <p><i class="fa fa-chevron-down"></i></p>
+        </div>
+        <div class="footer-up">
+            <p><i class="fa fa-chevron-up"></i></p>
+            <p>Scroll up</p>
+        </div>
     </header>
+
+    <main>
+        <section class="parallax-section filter">
+            <div id="particles-parallax"></div>
+            <h1 class="title">I'm passionate about <span id="text"></span></h1>
+            <img src="assets/images/background-1.png" id="background-1" alt="Fondo Principal">
+            <img src="assets/images/background-2.png" id="background-2" alt="Fondo de Personaje">
+            <div class="parallax-images">
+                <img src="assets/images/middle-buildings.png" class="parallax" id="middle-buildings" alt="Edificios">
+                <img src="assets/images/background-buildings.png" class="parallax" id="background-buildings"
+                    alt="Edificios">
+                <img src="assets/images/building-1.png" class="parallax" id="building-1" alt="Edificio">
+                <img src="assets/images/building-2.png" class="parallax" id="building-2" alt="Edificio">
+                <img src="assets/images/building-3.png" class="parallax" id="building-3" alt="Edificio">
+                <img src="assets/images/building-4.png" class="parallax" id="building-4" alt="Edificio">
+                <img src="assets/images/building-5.png" class="parallax" id="building-5" alt="Edificio">
+                <img src="assets/images/building-6.png" class="parallax" id="building-6" alt="Edificio">
+                <img src="assets/images/building-7.png" class="parallax" id="building-7" alt="Edificio">
+                <img src="assets/images/moon.png" class="parallax" id="moon" alt="Luna">
+            </div>
+        </section>
+    </main>
+
+
+    <section class="hero-section">
+        <div id="particles-hero"></div>
+        <div class="hero-picture">
+            <div class="profile"></div>
+        </div>
+        <div class="hero-description">
+            <h2 class="subtitle">
+                <p class="hello-msg">Hi, my name is Maxi</p>
+                <p>I am a software developer with experience in different technologies and programming
+                    languages. I consider myself passionate about technology and love to explore new ways to
+                    improve my work
+                    and expand my skills. I have strong soft skills, including communication and teamwork
+                    skills.</p>
+                <p>I enjoy working collaboratively with other developers, designers and specialists to create
+                    innovative and effective solutions. I am a critical, creative and goal-oriented thinker,
+                    always looking for challenges that allow me to learn and improve my skills. I enjoy solving
+                    complex
+                    problems and working on exciting projects that have a positive impact on the world.</p>
+                <p>I am excited to further develop my skills as a software developer and apply my experience
+                    to new projects and challenges.</p><br>
+                <p>
+                    <i class="fa-solid fa-user-tie"></i> I currently work as a computer teacher.
+                </p>
+                <p>
+                    <i class="fa-solid fa-user-graduate"></i> My degree in Computer Science is coming soon.
+                </p>
+                <p>
+                    <i class="fa-solid fa-bolt"></i> In my free time I do projects at&nbsp;<a
+                        href="https://kraken.net.ar/" class="link"> Kraken | Computing. </a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-file-arrow-down"></i> Download my&nbsp;<a class="link"
+                        href="https://github.com/Maxortega19" target="_blank">CV</a>
+
+                </p>
+            </h2>
+        </div>
+
+    </section>
+
+
+    <section class="skills-section">
+        <div id="particles-skills"></div>
+        <div class="spaceship"></div>
+        <h1 class="skills-title"><span id="skills-text"></span></h1>
+        <div class="cards">
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-html5-plain"></i>
+                    </h4>
+                    <p>Html5</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-css3-plain"></i>
+                    </h4>
+                    <p>Css3</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-bootstrap-plain"></i>
+                    </h4>
+                    <p>Bootstrap</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-wordpress-plain"></i>
+                    </h4>
+                    <p>Wordpress</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-woocommerce-plain"></i>
+                    </h4>
+                    <p>Woocommerce</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-javascript-plain"></i>
+                    </h4>
+                    <p>JavaScript</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-react-original"></i>
+                    </h4>
+                    <p>React</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-python-plain"></i>
+                    </h4>
+                    <p>Python</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-qt-original"></i>
+                    </h4>
+                    <p>Qt</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-numpy-original"></i>
+                    </h4>
+                    <p>Numpy</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-pandas-original"></i>
+                    </h4>
+                    <p>Pandas</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-java-plain"></i>
+                    </h4>
+                    <p>Java</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-spring-plain"></i>
+                    </h4>
+                    <p>Spring</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-mysql-plain"></i>
+                    </h4>
+                    <p>mysql</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-postgresql-plain"></i>
+                    </h4>
+                    <p>postgresql</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-figma-plain"></i>
+                    </h4>
+                    <p>Figma</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-photoshop-plain"></i>
+                    </h4>
+                    <p>Photoshop</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <h4>
+                        <i class="devicon-illustrator-plain"></i>
+                    </h4>
+                    <p>Illustrator</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="work-section">
+        <div id="particles-work"></div>
+        <h1 class="work-title"><span id="work-text"></span></h1>
+        <div class="work-text-block">
+            <div id="work-block1" class="work-text-content">
+                <h3>Text Encryptor</h3>
+                <p>The challenge is to create a web page that encrypts and decrypts the text entered by the user and
+                    then display it in accordance with the user's input</p>
+                <br>
+                <p>
+                    <i class="fa-solid fa-rocket"></i>&nbsp;<a class="link"
+                        href="https://maxortega19.github.io/Encriptador-de-Texto/" target="_blank">Demo</a>
+                </p>
+                <p>
+                    <i class="fa-brands fa-square-git"></i>&nbsp;<a class="link"
+                        href="https://github.com/Maxortega19/Encriptador-de-Texto" target="_blank">Repository</a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-file-code"></i> HTML5/CSS3/Vanilla Js
+                </p>
+            </div>
+            <div id="work-block2" class="work-text-content">
+                <h3>Kraken | Computación</h3>
+                <p>Business website dedicated to IT technical service and the development of general solutions for
+                    companies.</p>
+                <br>
+                <p>
+                    <i class="fa-solid fa-rocket"></i>&nbsp;<a class="link" href="https://kraken.net.ar/"
+                        target="_blank">Web Page</a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-file-code"></i> HTML5/CSS3/Bootstrap/Php/Vanilla Js
+                </p>
+            </div>
+            <div id="work-block3" class="work-text-content">
+                <h3>Equal Browser</h3>
+                <p>Accessible web browser, based on pictograms, for people with intellectual disabilities, reading and
+                    writing difficulties and/or communication disorders. Work in progress...</p>
+                <br>
+                <p>
+                    <i class="fa-brands fa-square-git"></i>&nbsp;<a class="link"
+                        href="https://github.com/Maxortega19/equal-browser" target="_blank">Repository</a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-file-code"></i> Python/Qt/CSS3/MySQL
+                </p>
+            </div>
+        </div>
+
+        <div class="work-img-block">
+            <div id="work-img1">
+                <p class="box">Text Encryptor</p>
+            </div>
+            <div id="work-img2">
+                <p class="box">Kraken | Computación</p>
+            </div>
+            <div id="work-img3">
+                <p class="box">Equal Browser</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact-section">
+        <div id="particles-contact"></div>
+        <div class="contact-form">
+            <form class="form" action="https://formsubmit.co/maximilianocjortega@gmail.com" method="POST">
+                <h1 class="form-title"><span id="form-text"></span></h1>
+
+                <label for="fname">First Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Your email..">
+
+                <label for="message">Message</label>
+                <input type="text" id="message" name="message" placeholder="Your message..">
+                
+                <button class="send-btn" type="submit" id="send-btn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send
+                </button>
+
+            </form>
+        </div>
+
+        <div class="contact-map" id="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52529.232821621976!2d-68.3252097!3d-34.6274931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967907fdb13d06a7%3A0xe0fb2796d473309d!2sSan%20Rafael%2C%20Mendoza!5e0!3m2!1ses-419!2sar!4v1681152897525!5m2!1ses-419!2sar"
+                frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/mail.js"></script>
+
 </body>
+
 </html>

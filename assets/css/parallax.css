@@ -1,0 +1,60 @@
+.parallax-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.parallax-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.filter:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(270deg,
+            hsl(215deg 73% 28%) 1%,
+            hsl(326deg 42% 43%) 50%,
+            hsl(341deg 100% 58%) 99%);
+    mix-blend-mode: multiply;
+}
+
+
+.parallax {
+    opacity: 0;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-parallax {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+#particles-hero,
+#particles-skills,
+#particles-work,
+#particles-contact {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+}

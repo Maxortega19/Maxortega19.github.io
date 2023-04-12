@@ -444,29 +444,66 @@ CONTACT
     color: white;
 }
 
-input[type=text]
- {
+.label-box {
+    position: relative;
+}
+
+.label-box input {
     font-family: var(--space);
     font-size: 1rem;
-    background-color: transparent;
+    background: transparent;
     border: none;
-    border-bottom: 0.2rem solid white;
+    border-bottom: 0.1rem solid white;
     color: white;
     width: 100%;
-}
-
-input[type=text]::placeholder{
-    font-family: var(--space);
-    color: white;
-}
-
-input[type=text]:focus{
     outline: none;
-    border-bottom: 0.3rem solid var(--red);
+    padding: 0.5rem 0;
+    margin-bottom: 1.5rem;
 }
 
+.label-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.label-box input::placeholder {
+    font-family: var(--space);
+    font-size: 1rem;
+    color: var(--red);
+    font-weight: bold;
+    text-align: right;
+}
+
+.label-box input:focus {
+    border-bottom: 0.2rem solid white;
+}
+
+.label-box input:focus~label {
+    top: -1.3rem;
+    left: 0;
+    font-size: 0.7rem;
+}
+
+/* Use for know if the imput is full and valid, to move the label to top */
+.label-box input[aria-invalid="false"]~label {
+    top: -1.3rem;
+    left: 0;
+    font-size: 0.7rem;
+}
+.label-box span{
+    color: var(--red);
+    margin: 0;
+    padding: 0;
+    font-size: 0.5rem;
+}
 .send-btn {
-    border: 0.3rem solid white;
+    border: 0.2rem solid white;
     background-color: transparent;
     font-family: var(--mulish);
     color: white;
@@ -478,8 +515,10 @@ input[type=text]:focus{
     opacity: 0;
 }
 
-.send-btn:hover {
-    border: 0.3rem solid var(--red);
+.send-btn:hover,
+.send-btn:focus {
+    outline: none;
+    border: 0.2rem solid var(--red);
     color: white;
     background-color: var(--red);
 }
@@ -492,7 +531,7 @@ input[type=text]:focus{
 }
 
 
-.contact-map > iframe{
+.contact-map>iframe {
     filter: grayscale(1);
     width: 100%;
     height: 100vh;

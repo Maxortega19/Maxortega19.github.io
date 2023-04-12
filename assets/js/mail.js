@@ -1,34 +1,114 @@
-// contact.js
 
-// Configurar EmailJS con tu Public Key
-emailjs.init("_a9VNUBkPxFdE3ozg"); // Reemplaza TU_PUBLIC_KEY con tu Public Key de EmailJS
+// Configurar EmailJS con tu User ID
+emailjs.init("_a9VNUBkPxFdE3ozg");
+
+var formContact = document.getElementById("form");
+
+
+
+
+
+
+
 
 // Manejar el envío del formulario
-document.getElementById("form").addEventListener("submit", function(event) {
+formContact.addEventListener("submit", function (event) {
   event.preventDefault(); // Prevenir el envío del formulario
 
   // Obtener los valores del formulario
-  var name = document.getElementById("name").value;
-  var lastname = document.getElementById("lastname").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
+  var nameInput = document.getElementById("name");
+  var lastNameInput = document.getElementById("lastname");
+  var emailInput = document.getElementById("email");
+  var messageInput = document.getElementById("message");
+
+  var name = nameInput.value;
+  var lastName = lastNameInput.value;
+  var email = emailInput.value;
+  var message = messageInput.value;
+
+  // Validar que no se dejen campos vacíos
+  if (!name || !lastName || !email || !message) {
+    // Mostrar mensaje de error en el placeholder
+    if (!name) {
+      nameInput.focus();
+      nameInput.placeholder = "Por favor, ingresa tu nombre";
+    }
+    if (!lastName) {
+      lastNameInput.focus();
+      lastNameInput.placeholder = "Por favor, ingresa tu apellido";
+    }
+    if (!email) {
+      emailInput.focus();
+      emailInput.placeholder = "Por favor, ingresa tu correo electrónico";
+    }
+    if (!message) {
+      messageInput.focus();
+      messageInput.placeholder = "Por favor, ingresa un mensaje";
+    }
+    return;
+  }
+
+
+  // Validar el formato del correo electrónico
+  if (!validateEmail(email)) {
+    // Mostrar mensaje de error en el placeholder
+    emailInput.placeholder = "Por favor, ingresa un correo electrónico válido";
+    return;
+  }
 
   // Configurar los parámetros del correo
   var params = {
     name: name,
-    lastname: lastname,
+    lastname: lastName,
     email: email,
     message: message
   };
 
+  // Actualizar el botón de envío
+  var btnEnviar = document.getElementById("send-btn");
+  btnEnviar.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...'; // Cambiar el contenido del botón a un icono de carga de FontAwesome
+
   // Enviar el correo con EmailJS
   emailjs.send("service_contactFormMaxi", "template_PortfolioForm", params) // Reemplaza TU_SERVICE_ID y TU_TEMPLATE_ID con tus IDs de servicio y plantilla de EmailJS
-    .then(function(response) {
+    .then(function (response) {
       console.log("Correo enviado con éxito", response);
-      // Aquí puedes agregar la lógica que deseas después de que se envíe el correo, por ejemplo, mostrar un mensaje de éxito en la página.
+      // Actualizar el botón de envío con un mensaje de éxito y un icono de FontAwesome
+      btnEnviar.innerHTML = '<i class="fas fa-check"></i> Enviado';
+
+
+      // Restaurar el formulario y el botón después de 2 segundos
+      setTimeout(function () {
+        btnEnviar.innerHTML = 'Enviar'; // Restaurar el contenido del botón a su valor original
+      }, 2000);
     })
-    .catch(function(error) {
+    .catch(function (error) {
       console.error("Error al enviar el correo", error);
-      // Aquí puedes agregar la lógica para manejar errores en el envío del correo, por ejemplo, mostrar un mensaje de error en la página.
+      // Actualizar el botón de envío con un mensaje de error y un icono de FontAwesome
+      btnEnviar.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error';
+
+      // Restaurar el formulario y el botón después de 2 segundos
+      setTimeout(function () {
+        btnEnviar.innerHTML = 'Enviar'; // Restaurar el contenido del botón a su valor original
+      }, 2000);
     });
 });
+
+// Función para validar el formato de correo electrónico
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
+
+
+
+var inputs = document.getElementsByTagName("input");
+// Manejar el evento input de los inputs
+for (var i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener("input", function () {
+    if (this.value === "") {
+      this.setAttribute("aria-invalid", "true");
+    } else {
+      this.setAttribute("aria-invalid", "false");
+    }
+  });
+}

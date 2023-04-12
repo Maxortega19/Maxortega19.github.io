@@ -323,21 +323,27 @@
     <section class="contact-section">
         <div id="particles-contact"></div>
         <div class="contact-form">
-            <form class="form" id="form" method="POST">
+            <form class="form" id="form" method="POST" autocomplete="off">
                 <h1 class="form-title"><span id="form-text"></span></h1>
 
-                <label for="name">First Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name..">
+                <div class="label-box">
+                    <input type="text" id="name" name="name" placeholder="" aria-invalid="true">
+                    <label for="name">First Name</label>
+                </div>
 
-                <label for="lastname">Last Name</label>
-                <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+                <div class="label-box">
+                    <input type="text" id="lastname" name="lastname" placeholder="" aria-invalid="true">
+                    <label for="lastname">Last Name</label>
+                </div>
+                <div class="label-box">
+                    <input type="email" id="email" name="email" placeholder="" aria-invalid="true">
+                    <label for="email">Email</label>
+                </div>
+                <div class="label-box">
+                    <input type="text" id="message" name="message" placeholder="" aria-invalid="true">
+                    <label for="message">Message</label>
+                </div>
 
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Your email..">
-
-                <label for="message">Message</label>
-                <input type="text" id="message" name="message" placeholder="Your message..">
-                
                 <button class="send-btn" type="submit" id="send-btn">
                     <i class="fa-solid fa-paper-plane"></i>
                     Send

@@ -78,8 +78,8 @@ formContact.addEventListener("submit", function (event) {
 
       // Restaurar el formulario y el botón después de 2 segundos
       setTimeout(function () {
-        btnEnviar.innerHTML = 'Enviar'; // Restaurar el contenido del botón a su valor original
-      }, 2000);
+        btnEnviar.innerHTML = '<i class="fa-solid fa-paper-plane"></i>Send'; // Restaurar el contenido del botón a su valor original
+      }, 3000);
     })
     .catch(function (error) {
       console.error("Error al enviar el correo", error);
@@ -88,8 +88,8 @@ formContact.addEventListener("submit", function (event) {
 
       // Restaurar el formulario y el botón después de 2 segundos
       setTimeout(function () {
-        btnEnviar.innerHTML = 'Enviar'; // Restaurar el contenido del botón a su valor original
-      }, 2000);
+        btnEnviar.innerHTML = '<i class="fa-solid fa-paper-plane"></i>Send'; // Restaurar el contenido del botón a su valor original
+      }, 3000);
     });
 });
 

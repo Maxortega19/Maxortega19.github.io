@@ -446,6 +446,7 @@ CONTACT
 
 .label-box {
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .label-box input {
@@ -458,7 +459,6 @@ CONTACT
     width: 100%;
     outline: none;
     padding: 0.5rem 0;
-    margin-bottom: 1.5rem;
 }
 
 .label-box label {
@@ -471,6 +471,16 @@ CONTACT
     pointer-events: none;
     transition: .5s;
 }
+
+.error-msg {
+    font-family: var(--space);
+    color: white;
+    background-color: var(--red);
+    font-size: 0.7rem;
+    transition: .5s;
+  }
+
+
 
 .label-box input::placeholder {
     font-family: var(--space);

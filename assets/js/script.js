@@ -6,12 +6,17 @@ INITIAL VARIABLES & FUNCTIONS
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({
   ease: "slow(1.7, 1.7, false)",
-  duration: 4
+  duration: 5
 });
 
 // This allow me to use the vh vw in the script
 const vw = (coef) => window.innerWidth * (coef / 100);
 const vh = (coef) => window.innerHeight * (coef / 100);
+
+//Colors
+const darkRed = "#800E1F"
+const red = "#F81E44"
+const blue = "#020236"
 
 
 // APPEAR with opacity FUNCTION
@@ -42,7 +47,7 @@ function initLogos() {
   var logos = gsap.timeline();
   logos
     .to(".img-logo", { duration: 2, autoAlpha: 1, y: 0 })
-    .to(".footer-down", { duration: 2, autoAlpha: 1 })
+    .to(".scroll", { duration: 2, autoAlpha: 1 })
     .to(".name-logo", { duration: 2, autoAlpha: 1, x: 0 })
     .to(".title", { duration: 2, autoAlpha: 1 })
 }
@@ -128,15 +133,15 @@ function appearHero() {
     end: "bottom -3000%",
     scrub: 4,
     pin: ".hero-section",
-    onEnter: () => changeColor("#F81E44"),
-    onLeave: () => changeColor("#F81E44"),
-    onLeaveBack: () => changeColor("#F81E44"),
-    onEnterBack: () => changeColor("#F81E44"),
+    onEnter: () => changeColor(red),
+    onLeave: () => changeColor(red),
+    onLeaveBack: () => changeColor(red),
+    onEnterBack: () => changeColor(red),
   },
   )
 
   hero
-    .to(".hero-section", { autoAlpha: 1 })
+    .to(".hero-section", { autoAlpha: 1 }, "<")
     .to("#particles-hero", { autoAlpha: 1 })
     .to(".profile", { filter: "blur(100px)", autoAlpha: 0, })
     .to(".profile", { filter: "blur(0px)", autoAlpha: 1, })
@@ -167,10 +172,10 @@ function appearSkills() {
     end: "bottom -3000%",
     scrub: 4,
     pin: ".skills-section",
-    onEnter: () => changeColor("#020236"),
-    onLeave: () => changeColor("#020236"),
-    onLeaveBack: () => changeColor("#020236"),
-    onEnterBack: () => changeColor("#020236"),
+    onEnter: () => changeColor(blue),
+    onLeave: () => changeColor(blue),
+    onLeaveBack: () => changeColor(blue),
+    onEnterBack: () => changeColor(blue),
   },
   )
 
@@ -183,9 +188,9 @@ function appearSkills() {
 
 
   skillsAnim
-    .to(".skills-section", { autoAlpha: 1 })
+    .to(".skills-section", { opacity: 1 })
     .to("#particles-skills", { autoAlpha: 1 })
-    .to(".spaceship", { autoAlpha: 1, duration: 2, ease: "slow(0.7, 0.7, false)" })
+    .to(".spaceship", { autoAlpha: 1})
     .to(".spaceship", {
       keyframes: {
         scale: [3, 6, 9, 12],
@@ -236,10 +241,10 @@ function appearWork() {
     scrub: 4,
     pin: true,
     end: "bottom -3000%",
-    onEnter: () => changeColor("#F81E44"),
-    onLeave: () => changeColor("#F81E44"),
-    onLeaveBack: () => changeColor("#F81E44"),
-    onEnterBack: () => changeColor("#F81E44"),
+    onEnter: () => changeColor(red),
+    onLeave: () => changeColor(red),
+    onLeaveBack: () => changeColor(red),
+    onEnterBack: () => changeColor(red),
   },
   )
 
@@ -252,7 +257,7 @@ function appearWork() {
 
 
   work
-    .to(".work-section", { autoAlpha: 1, })
+    .to(".work-section", { opacity: 1, })
     .to("#particles-work", { autoAlpha: 1 })
     .to(".work-title", { autoAlpha: 1, }, "+=10")
     .to(".work-title", { autoAlpha: 1, }, "+=10")
@@ -296,10 +301,10 @@ function appearContact() {
     end: "bottom -3000%",
     scrub: 4,
     pin: ".contact-section",
-    onEnter: () => changeColor("#020236"),
-    onLeave: () => changeColor("#020236"),
-    onLeaveBack: () => changeColor("#020236"),
-    onEnterBack: () => changeColor("#020236"),
+    onEnter: () => changeColor(blue),
+    onLeave: () => changeColor(blue),
+    onLeaveBack: () => changeColor(blue),
+    onEnterBack: () => changeColor(blue),
   },
   )
 
@@ -315,14 +320,18 @@ function appearContact() {
 
 
   contact
-    .to(".contact-section", { autoAlpha: 1, })
+    .to(".contact-section", { opacity: 1, })
     .to("#particles-contact", { autoAlpha: 1 })
     .to(".contact-form, .contact-map", { autoAlpha: 1, })
-  staggerOpacity(contact, "form", "input");
+  staggerOpacity(contact, "form", ".label-box");
   contact
-    .to(".footer-down", { display: "none" })
-    .to(".footer-up", { autoAlpha: 1, })
-    .to(".send-btn", { autoAlpha: 1, })
+    .to(".send-btn", { autoAlpha: 1 })
+    .to(".footer-icons > p , .footer-logo", { autoAlpha: 1 })
+  staggerOpacity(contact, "footer-icons", "a");
+  contact
+    .to(".scroll", { autoAlpha: 0 })
+
+
 
 
 }
@@ -349,8 +358,18 @@ appearContact()
 
 
 
-
-
+const cursor = document.querySelector(".cursor");
+document.body.addEventListener("mousemove", ({ clientX, clientY }) => {
+  cursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
+});
+document.querySelector('.send-btn').addEventListener("mouseenter", ({ clientX, clientY }) => {
+  cursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
+  cursor.style.backgroundColor = blue;
+});
+document.querySelector('.send-btn').addEventListener("mouseleave", ({ clientX, clientY }) => {
+  cursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
+  cursor.style.backgroundColor = "rgba(255, 255, 255, .65)";
+});
 
 
 

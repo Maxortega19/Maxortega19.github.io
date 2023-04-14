@@ -1,7 +1,7 @@
 particlesJS("particles-parallax", {
   "particles": {
     "number": {
-      "value": 500,
+      "value": 250,
       "density": {
         "enable": true,
         "value_area": 801.7060304327614
@@ -113,7 +113,7 @@ particlesJS("particles-parallax", {
 particlesJS("particles-hero", {
   "particles": {
     "number": {
-      "value": 500,
+      "value": 250,
       "density": {
         "enable": true,
         "value_area": 801.7060304327614

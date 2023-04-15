@@ -1,3 +1,7 @@
+/*///////////////////////////////
+Main Rules
+//////////////////////////////*/
+
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@900&family=Space+Mono&display=swap');
 
 :root {
@@ -35,17 +39,29 @@ img {
 }
 
 
-.navbar {
+/*///////////////////////////////
+Cursor
+//////////////////////////////*/
+
+.cursor {
     position: fixed;
-    width: 100%;
-    height: 8rem;
-    z-index: 9997;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    z-index: 9999;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 36px;
+    background-color: rgba(255, 255, 255, .65);
+    box-shadow: 0 0 24px 0 #0000001a, 0 1px 0 0 #0000;
+    pointer-events: none;
+    transition: all 200ms ease-out;
+    left: -1px;
+    top: -1px;
+    box-sizing: border-box;
 }
 
+
+/*///////////////////////////////
+Preloader Section
+//////////////////////////////*/
 
 .preloader-container{
     position: fixed;
@@ -67,581 +83,29 @@ img {
     stroke-dashoffset: 810;
     animation: offset 9s linear forwards , fill-it 3s 9s forwards;
   }
-  
-  @keyframes offset {
-    100% {
-      stroke-dashoffset: 0;
-    stroke-dasharray: 0; 
-
-    }  
-  }
-  
-  @keyframes fill-it {
-    100% {
-      fill: white; 
-    }
-  }
 
 
-.logo {
-    display: flex;
-    width: 80%;
-    align-items: center;
-    justify-content: start;
-}
 
-.img-logo {
-    width: 10%;
-    opacity: 0;
-}
-
-.name-logo {
-    font-family: var(--mulish);
-    font-size: 1.2rem;
-    color: white;
-    opacity: 0;
-    transform: translate(-100px, 0px);
-}
-
-
-.social-icons {
-    width: 10%;
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 1.3rem;
-    margin-right: 1.5rem;
-}
-
-.fa-brands,
-.fa-solid {
-    color: white;
-}
-
-.title {
-    font-family: var(--mulish);
-    font-size: 3rem;
-    color: white;
-    z-index: 1000;
-    opacity: 0;
-    text-align: center;
-    padding: 3rem;
-}
-
-
-#text {
-    font-family: var(--mulish);
-    color: var(--red);
-}
 
 /*///////////////////////////////
-HERO SECTION
+Particles Options
 //////////////////////////////*/
 
-.hero-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-}
-
-.hero-picture {
-    height: 100vh;
-    width: 35%;
-
-}
-
-.hero-description {
-    width: 65%;
-    z-index: 9999;
-}
-
-
-.profile {
-    opacity: 0;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    background-image: url('../images/profile.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    opacity: 0;
-}
-
-
-.subtitle {
-    background: rgb(248, 30, 68);
-    background: -moz-linear-gradient(90deg, rgba(248, 30, 68, 1) 50%, rgba(128, 14, 31, 1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(248, 30, 68, 1) 50%, rgba(128, 14, 31, 1) 100%);
-    background: linear-gradient(90deg, rgba(248, 30, 68, 1) 50%, rgba(128, 14, 31, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f81e44", endColorstr="#800e1f", GradientType=1);
-    font-family: var(--space);
-    font-size: 0.9rem;
-    color: white;
-    opacity: 0;
-    text-align: justify;
-    margin: 3rem 3rem;
-    padding: 3rem 3rem;
-    box-shadow: 30px -15px 50px -15px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 30px -15px 50px -15px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 30px -15px 50px -15px rgba(0, 0, 0, 0.5);
-}
-
-
-.hello-msg {
-    font-family: var(--mulish);
-    font-size: 2rem;
-    padding-bottom: 0.3rem;
-    color: var(--white);
-    display: block;
-}
-
-.link {
+#particles-home,
+#particles-hero,
+#particles-skills,
+#particles-work,
+#particles-contact {
     position: absolute;
-    text-decoration: none;
-    font-style: italic;
-    color: white;
-    z-index: 9999;
-}
-
-/* ////////////////////////////
-SKILLS
-///////////////////////////////*/
-
-.skills-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    opacity: 0;
-    background: rgb(96, 23, 103);
-    background: -moz-linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%);
-    background: -webkit-linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%);
-    background: linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#601767", endColorstr="#020236", GradientType=1);
-}
-
-
-.spaceship {
-    position: absolute;
-    width: 1rem;
-    height: 0.5rem;
-    background-image: url(../images/spaceship.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin: 2rem;
-    opacity: 0;
-    z-index: 5003;
-}
-
-.skill {
-    font-family: var(--space);
-    font-size: 0.9rem;
-    color: white;
-    opacity: 0;
-    text-align: justify;
-    padding: 0 6rem;
-}
-
-.skills-title {
-    font-family: var(--mulish);
-    font-size: 3rem;
-    color: white;
-    z-index: 1000;
-    opacity: 0;
-    text-align: center;
-    padding: 3rem;
-    animation: glitch1 1.5s infinite;
-}
-
-#skills-text {
-    font-family: var(--mulish);
-    color: white;
-}
-
-.cards {
-    position: absolute;
-    top: 0;
-    left: 50;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    opacity: 0;
-    padding: 10rem;
-}
-
-.card {
-    padding: 0.5rem 1rem;
-}
-
-.container>h4 {
-    font-family: var(--space);
-    font-size: 5rem;
-    color: white;
-    text-align: center;
-    animation: shake 5s ease 0s infinite normal forwards;
-}
-
-
-
-.container>p {
-    font-family: var(--space);
-    font-size: 0.8rem;
-    color: white;
-    text-align: center;
-}
-
-.container>h4:hover {
-    font-family: var(--space);
-    font-size: 5rem;
-    color: white;
-    text-align: center;
-}
-
-/* ////////////////////////////
-WORK
-///////////////////////////////*/
-
-.work-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    height: 100vh;
-    display: flex;
-    opacity: 0;
-    justify-content: center;
-    align-items: center;
-}
-
-.work-title {
-    font-family: var(--mulish);
-    font-size: 3rem;
-    color: white;
-    z-index: 1000;
-    text-align: center;
-    padding: 3rem;
-    position: absolute;
-    animation: glitch1 1.5s infinite;
-}
-
-#work-text {
-    font-family: var(--mulish);
-    color: white;
-}
-
-.work-text-block {
-    position: relative;
-    width: 70%;
-    height: 65%;
-    margin-left: 3rem;
-    opacity: 0;
-    z-index: 9999;
-}
-
-#work-block2,
-#work-block3 {
-    display: none;
-}
-
-.work-text-content {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 3rem;
-    box-shadow: -20px -20px 15px 0px rgba(0, 0, 0, 0.1);
-    background: rgb(248, 30, 68);
-    background: -moz-linear-gradient(90deg, rgba(248, 30, 68, 1) 50%, rgba(128, 14, 31, 1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(248, 30, 68, 1) 50%, rgba(128, 14, 31, 1) 100%);
-    background: linear-gradient(90deg, rgba(248, 30, 68, 1) 50%, rgba(128, 14, 31, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f81e44", endColorstr="#800e1f", GradientType=1);
-    box-shadow: 30px -15px 50px -15px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 30px -15px 50px -15px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 30px -15px 50px -15px rgba(0, 0, 0, 0.5);
-}
-
-.work-text-content h3 {
-    font-family: var(--mulish);
-    font-size: 2rem;
-    color: white;
-    line-height: 3rem;
-}
-
-.work-text-content p {
-    font-family: var(--space);
-    font-size: 0.9rem;
-    color: white;
-    line-height: 1.5rem;
-}
-
-.work-img-block {
-    width: 100%;
-    height: 65%;
-    position: relative;
-    margin-right: 3rem;
-    opacity: 0;
     z-index: 9999;
-    background-color: var(--darkred);
-}
-
-.box {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    line-height: 3;
-    width: 100%;
-    text-align: center;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    padding: 1rem 2rem;
-    color: white;
-    font-family: var(--mulish);
-}
-
-
-#work-img1 {
-    background-image: url('../images/work-encrypt.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    animation: glitch1 1.5s infinite;
-
-}
-
-
-
-
-#work-img2 {
-    background-image: url('../images/work-kraken.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    animation: glitch1 1.5s infinite;
-
-}
-
-#work-img3 {
-    background-image: url('../images/work-equal.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    animation: glitch1 1.5s infinite;
-
-}
-
-/* ////////////////////////////
-CONTACT
-///////////////////////////////*/
-
-.contact-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    background: rgb(96, 23, 103);
-    background: -moz-linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%);
-    background: -webkit-linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%);
-    background: linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#601767", endColorstr="#020236", GradientType=1);
-}
-
-.contact-form {
-    height: 100vh;
-    width: 55%;
-    padding: 1rem 6rem;
-    opacity: 0;
-    z-index: 9999;
-}
-
-.form-title {
-    font-family: var(--mulish);
-    font-size: 1.5rem;
-    width: 100%;
-    color: white;
-    z-index: 1000;
-    text-align: center;
-    padding: 2rem;
-}
-
-#form-text {
-    font-family: var(--mulish);
-    color: white;
-}
-
-.label-box {
-    position: relative;
-    margin-bottom: 1.5rem;
-}
-
-.label-box input {
-    font-family: var(--space);
-    font-size: 0.8rem;
-    background: transparent;
-    border: none;
-    border-bottom: 0.1rem solid white;
-    color: white;
-    width: 100%;
-    outline: none;
-    padding: 0.5rem 0;
-}
-
-.label-box label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0.5rem 0;
-    font-size: .8rem;
-    color: white;
-    pointer-events: none;
-    transition: .5s;
-}
-
-.error-msg {
-    font-family: var(--space);
-    color: white;
-    background-color: var(--red);
-    font-size: 0.7rem;
-    transition: .5s;
-}
-
-.label-box input:focus {
-    border-bottom: 0.2rem solid white;
-}
-
-.label-box input:focus~label {
-    top: -1.3rem;
-    left: 0;
-    font-size: 0.7rem;
-}
-
-/* Use for know if the imput is full and valid, to move the label to top */
-.label-box input[aria-invalid="false"]~label {
-    top: -1.3rem;
-    left: 0;
-    font-size: 0.7rem;
-}
-
-.send-btn {
-    border: 0.2rem solid white;
-    background-color: transparent;
-    font-family: var(--mulish);
-    color: white;
-    width: 100%;
-    margin-top: 1rem;
-    padding: 0.8rem;
-    transition: 0.5s;
     opacity: 0;
 }
-
-.send-btn i {
-    color: white;
-    transition: 0.5s;
-}
-
-.send-btn:hover,
-.send-btn:focus {
-    outline: none;
-    border: 0.2rem solid white;
-    color: var(--blue);
-    background-color: white;
-    transition: 0.5s;
-}
-
-.send-btn:hover i,
-.send-btn:focus i {
-    color: var(--blue);
-}
-
-.footer-icons {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    align-items: center;
-    font-size: 1rem;
-    margin-top: 5rem;
-}
-
-.footer-icons p {
-    font-family: var(--mulish);
-    color: white;
-    font-size: 0.7rem;
-    padding-bottom: 1rem;
-    opacity: 0;
-}
-
-.footer-icons a {
-    z-index: 9999;
-}
-
-.footer-logo {
-    width: 10%;
-    opacity: 0;
-}
-
-
-.contact-map {
-    height: 100vh;
-    width: 45%;
-    opacity: 0;
-    z-index: 9999;
-}
-
-
-.contact-map>iframe {
-    filter: grayscale(1);
-    width: 100%;
-    height: 100vh;
-    transition: 1.5s;
-}
-
 
 
 /* ////////////////////////////
-FOOTERS 
+Scroll
 ///////////////////////////////*/
 
 .scroll {
@@ -674,9 +138,9 @@ FOOTERS
 }
 
 
-/*/////////////////////////////
-ANIMATIONS
-////////////////////////////////*/
+/* ////////////////////////////
+Animations
+///////////////////////////////*/
 
 @-moz-keyframes bounceUp {
 
@@ -750,7 +214,6 @@ ANIMATIONS
     }
 }
 
-
 /******************************/
 
 @keyframes bounceDown {
@@ -781,6 +244,7 @@ ANIMATIONS
     }
 }
 
+/******************************/
 
 @keyframes shake {
 
@@ -815,9 +279,7 @@ ANIMATIONS
     }
 }
 
-
-
-
+/******************************/
 
 @keyframes glitch1 {
     0% {
@@ -886,22 +348,18 @@ ANIMATIONS
     }
 }
 
+/******************************/
 
-/*============================
-The juicy stuff
-============================*/
-.cursor {
-    position: fixed;
-    z-index: 9999;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 36px;
-    background-color: rgba(255, 255, 255, .65);
-    box-shadow: 0 0 24px 0 #0000001a, 0 1px 0 0 #0000;
-    pointer-events: none;
-    transition: all 200ms ease-out;
-    left: -1px;
-    top: -1px;
-    box-sizing: border-box;
-}
+@keyframes offset {
+    100% {
+      stroke-dashoffset: 0;
+    stroke-dasharray: 0; 
 
+    }  
+  }
+  
+  @keyframes fill-it {
+    100% {
+      fill: white; 
+    }
+  }

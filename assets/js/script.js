@@ -63,14 +63,14 @@ END
 
 
 /*//////////////////////////////////////////////
-PARALLAX BACKGROUND SECTION
+HOME SECTION
 *///////////////////////////////////////////////
 
-function parallaxBackground() {
-  var parallax = gsap.timeline({defaults: {duration: 10} });
+function homeBackground() {
+  var home = gsap.timeline({defaults: {duration: 10} });
 
-  parallax
-    .to("#particles-parallax , .parallax-section", { autoAlpha: 1 })
+  home
+    .to("#particles-home , .home-section", { autoAlpha: 1 })
     .to("#building-1", { autoAlpha: 1 })
     .to("#building-2", { autoAlpha: 1 })
     .to("#building-3", { autoAlpha: 1 })
@@ -81,7 +81,7 @@ function parallaxBackground() {
     .to("#background-buildings", { autoAlpha: 1 })
     .to("#middle-buildings", { autoAlpha: 1 })
     .to("#moon", { autoAlpha: 1 })
-    .to(".parallax-section, .navbar, #particles-parallax", { autoAlpha: 0 })
+    .to(".home-section, .navbar, #particles-home", { autoAlpha: 0 })
 
 
   // TYPED TEXT IN BACKGROUND SECTION
@@ -95,12 +95,12 @@ function parallaxBackground() {
 
 
   ScrollTrigger.create({
-    animation: parallax,
-    trigger: ".parallax-section",
+    animation: home,
+    trigger: ".home-section",
     start: "center center",
     end: "bottom -3000%",
     scrub: 4,
-    pin: ".parallax-section",
+    pin: ".home-section",
     onEnter: () => changeColor("black"),
     onLeave: () => changeColor("black"),
     onLeaveBack: () => changeColor("black"),
@@ -355,7 +355,7 @@ gsap.delayedCall(10, main);
 function main(){
   initLogos()
   initSocialIcons()
-  parallaxBackground()
+  homeBackground()
   appearHero()
   appearSkills()
   appearWork()

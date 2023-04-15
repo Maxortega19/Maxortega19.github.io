@@ -1,4 +1,4 @@
-particlesJS("particles-parallax", {
+particlesJS("particles-home", {
   "particles": {
     "number": {
       "value": 250,

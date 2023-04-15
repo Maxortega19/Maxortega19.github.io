@@ -1,0 +1,169 @@
+/* ////////////////////////////
+Work Section
+///////////////////////////////*/
+
+.work-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ////////////////////////////
+Title
+///////////////////////////////*/
+
+.work-title {
+    font-family: var(--mulish);
+    font-size: 3rem;
+    color: white;
+    z-index: 1000;
+    text-align: center;
+    padding: 3rem;
+    position: absolute;
+    animation: glitch1 1.5s infinite;
+}
+
+/* ////////////////////////////
+Text Block
+///////////////////////////////*/
+
+#work-text {
+    font-family: var(--mulish);
+    color: white;
+}
+
+.work-text-block {
+    position: relative;
+    width: 70%;
+    height: 65%;
+    margin-left: 3rem;
+    opacity: 0;
+    z-index: 9999;
+}
+
+#work-block2,
+#work-block3 {
+    display: none;
+}
+
+.work-text-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3rem;
+    box-shadow: -20px -20px 15px 0px rgba(0, 0, 0, 0.1);
+    background: rgb(248, 30, 68);
+    background: -moz-linear-gradient(90deg, rgba(248, 30, 68, 1) 50%, rgba(128, 14, 31, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(248, 30, 68, 1) 50%, rgba(128, 14, 31, 1) 100%);
+    background: linear-gradient(90deg, rgba(248, 30, 68, 1) 50%, rgba(128, 14, 31, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f81e44", endColorstr="#800e1f", GradientType=1);
+    box-shadow: 30px -15px 50px -15px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 30px -15px 50px -15px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 30px -15px 50px -15px rgba(0, 0, 0, 0.5);
+}
+
+.work-text-content h3 {
+    font-family: var(--mulish);
+    font-size: 2rem;
+    color: white;
+    line-height: 3rem;
+}
+
+.work-text-content p {
+    font-family: var(--space);
+    font-size: 0.9rem;
+    color: white;
+    line-height: 1.5rem;
+}
+
+
+/* ////////////////////////////
+Image Block
+///////////////////////////////*/
+
+.work-img-block {
+    width: 100%;
+    height: 65%;
+    position: relative;
+    margin-right: 3rem;
+    opacity: 0;
+    z-index: 9999;
+    background-color: var(--darkred);
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    line-height: 3;
+    width: 100%;
+    text-align: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    color: white;
+    font-family: var(--mulish);
+}
+
+
+/* ////////////////////////////
+Images
+///////////////////////////////*/
+
+#work-img1 {
+    background-image: url('../images/work-encrypt.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    animation: glitch1 1.5s infinite;
+}
+
+#work-img2 {
+    background-image: url('../images/work-kraken.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    animation: glitch1 1.5s infinite;
+}
+
+#work-img3 {
+    background-image: url('../images/work-equal.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    animation: glitch1 1.5s infinite;
+}
+

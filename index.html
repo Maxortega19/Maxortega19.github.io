@@ -16,6 +16,17 @@
 
 <body>
     <span class="cursor"></span>
+    <div class="preloader-container">
+        <svg viewBox="0 0 800 600" preserveAspectRatio="xMinYMin meet" >
+            <polygon class="preloader" fill="transparent" points="261,153 261,398 310,398 310,205 310,204 310,204 312,204 369.875,394 374.375,398 350.875,450.5 
+		390.75,383 444.5,205 446,205 446,287 495,204 495,147 422,147 379.667,290 376,290 333.667,147 261,147 	" />
+            <path class="preloader" fill="transparent" d="M414.063,363.406l-39.234,66.453c0,0,10.898,26.445,76.898,23.445s41.595-8.694,49.429-6.61
+		s30.172-22.347,30.839-50.014s0.003-190.715,0.003-190.715s-0.706-3.628-3.622-3.587c-2.918,0.042-13.375-0.002-13.375-0.002
+		l0.084-3.458l22-48.125l-54.209,90.896L483,396.333c0,0-2.938,12.073-12.563,13.636S458.625,411,458.625,411H441
+		c0,0-14.541-0.834-14.583-1.917s-9.709-3.041-11.167-11.083S414.063,363.406,414.063,363.406z" />
+        </svg>
+    </div>
+ 
     <header>
         <nav class="navbar">
             <div class="logo">
@@ -30,12 +41,11 @@
         </div>
     </header>
 
-    <main>
         <section class="parallax-section filter">
+            <div id="particles-parallax"></div>
             <h1 class="title">I'm passionate about <span id="text"></span></h1>
             <img src="assets/images/background-1.png" id="background-1" alt="Fondo Principal">
             <img src="assets/images/background-2.png" id="background-2" alt="Fondo de Personaje">
-            <div id="particles-parallax"></div>
             <div class="parallax-images">
                 <img src="assets/images/middle-buildings.png" class="parallax" id="middle-buildings" alt="Edificios">
                 <img src="assets/images/background-buildings.png" class="parallax" id="background-buildings"
@@ -50,7 +60,6 @@
                 <img src="assets/images/moon.png" class="parallax" id="moon" alt="Luna">
             </div>
         </section>
-    </main>
 
 
     <section class="hero-section">

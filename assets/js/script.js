@@ -6,7 +6,7 @@ INITIAL VARIABLES & FUNCTIONS
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({
   ease: "slow(1.7, 1.7, false)",
-  duration: 5
+  duration: 2
 });
 
 // This allow me to use the vh vw in the script
@@ -44,14 +44,13 @@ function initSocialIcons() {
 
 // INITAL MAXI LOGOS FOR BACKGROUND
 function initLogos() {
-  var logos = gsap.timeline();
+  var logos = gsap.timeline({defaults: {duration: 2, delay: 1} });
   logos
-    .to(".img-logo", { duration: 2, autoAlpha: 1, y: 0 })
-    .to(".scroll", { duration: 2, autoAlpha: 1 })
-    .to(".name-logo", { duration: 2, autoAlpha: 1, x: 0 })
-    .to(".title", { duration: 2, autoAlpha: 1 })
+    .to(".img-logo", { autoAlpha: 1, y: 0 })
+    .to(".scroll", { autoAlpha: 1 })
+    .to(".name-logo", { autoAlpha: 1, x: 0 })
+    .to(".title", { autoAlpha: 1 })
 }
-
 
 
 
@@ -68,8 +67,10 @@ PARALLAX BACKGROUND SECTION
 *///////////////////////////////////////////////
 
 function parallaxBackground() {
-  var parallax = gsap.timeline();
+  var parallax = gsap.timeline({defaults: {duration: 10} });
+
   parallax
+    .to("#particles-parallax , .parallax-section", { autoAlpha: 1 })
     .to("#building-1", { autoAlpha: 1 })
     .to("#building-2", { autoAlpha: 1 })
     .to("#building-3", { autoAlpha: 1 })
@@ -99,7 +100,7 @@ function parallaxBackground() {
     start: "center center",
     end: "bottom -3000%",
     scrub: 4,
-    pin: "main",
+    pin: ".parallax-section",
     onEnter: () => changeColor("black"),
     onLeave: () => changeColor("black"),
     onLeaveBack: () => changeColor("black"),
@@ -124,7 +125,7 @@ HERO SECTION
 
 function appearHero() {
 
-  var hero = gsap.timeline();
+  var hero = gsap.timeline({defaults: {duration: 10} });
 
   ScrollTrigger.create({
     animation: hero,
@@ -163,7 +164,7 @@ SKILLS SECTION
 *///////////////////////////////////////////////
 
 function appearSkills() {
-  var skillsAnim = gsap.timeline();
+  var skillsAnim = gsap.timeline({defaults: {duration: 10} });
 
   ScrollTrigger.create({
     animation: skillsAnim,
@@ -190,7 +191,7 @@ function appearSkills() {
   skillsAnim
     .to(".skills-section", { opacity: 1 })
     .to("#particles-skills", { autoAlpha: 1 })
-    .to(".spaceship", { autoAlpha: 1})
+    .to(".spaceship", { autoAlpha: 1 })
     .to(".spaceship", {
       keyframes: {
         scale: [3, 6, 9, 12],
@@ -232,7 +233,7 @@ WORK SECTION
 *///////////////////////////////////////////////
 function appearWork() {
 
-  var work = gsap.timeline();
+  var work = gsap.timeline({defaults: {duration: 10} });
 
   ScrollTrigger.create({
     animation: work,
@@ -292,7 +293,7 @@ CONTACT
 *///////////////////////////////////////////////
 
 function appearContact() {
-  var contact = gsap.timeline();
+  var contact = gsap.timeline({defaults: {duration: 10} });
 
   ScrollTrigger.create({
     animation: contact,
@@ -347,14 +348,20 @@ END
 /*//////////////////////////////////////////////
 MASTER FUNCTIONALITY
 *///////////////////////////////////////////////
+gsap.to(".preloader-container", { autoAlpha: 0}, "+=12");
+gsap.delayedCall(10, main);
 
-initLogos()
-initSocialIcons()
-parallaxBackground()
-appearHero()
-appearSkills()
-appearWork()
-appearContact()
+
+function main(){
+  initLogos()
+  initSocialIcons()
+  parallaxBackground()
+  appearHero()
+  appearSkills()
+  appearWork()
+  appearContact()
+}
+
 
 
 

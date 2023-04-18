@@ -54,7 +54,7 @@ NavBar & Logos
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: start;
 }
 
 .logo {
@@ -97,3 +97,25 @@ Title & Text
     font-family: var(--mulish);
     color: var(--red);
 }
+
+
+  /* Cuando la pantalla es menor a 700px la dirección de los items flex va a ser uno bajo al otro */
+  @media screen and (max-width: 700px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .img-logo {
+        width: 15%;
+    }
+    
+    .name-logo {
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+    
+  }

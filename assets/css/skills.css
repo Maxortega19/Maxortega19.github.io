@@ -11,11 +11,6 @@ Skills Section
     justify-content: center;
     display: flex;
     opacity: 0;
-    background: rgb(96, 23, 103);
-    background: -moz-linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%);
-    background: -webkit-linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%);
-    background: linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#601767", endColorstr="#020236", GradientType=1);
 }
 
 .spaceship {
@@ -96,3 +91,26 @@ Skills Cards
     color: white;
     text-align: center;
 }
+
+ /* Cuando la pantalla es menor a 700px la dirección de los items flex va a ser uno bajo al otro */
+ @media screen and (max-width: 700px) {
+
+    .skills-title {
+        font-size: 1.5rem;
+    }
+
+    .spaceship {
+        width: 0.8rem;
+        height: 0.3rem;
+    }
+
+    .cards {
+        padding: 1rem;
+    }
+
+    .container>h4 {
+        font-size: 2.5rem;
+    }
+
+
+  }

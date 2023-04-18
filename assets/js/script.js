@@ -1,6 +1,6 @@
 
 /*//////////////////////////////////////////////
-INITIAL VARIABLES & FUNCTIONS
+Initials Variables
 *///////////////////////////////////////////////
 
 gsap.registerPlugin(ScrollTrigger);
@@ -19,13 +19,16 @@ const red = "#F81E44"
 const blue = "#020236"
 
 
+/*//////////////////////////////////////////////
+General Functions
+*///////////////////////////////////////////////
+
 // APPEAR with opacity FUNCTION
 function staggerOpacity(animation, fatherClass, sonClass) {
   animation.set("." + fatherClass, { autoAlpha: 1 })
   animation.from("." + fatherClass + " " + sonClass, { autoAlpha: 0, duration: 4, stagger: 2 })
   animation.to("." + fatherClass + " " + sonClass, { autoAlpha: 1, duration: 4, stagger: 2 })
 }
-
 
 function changeColor(color) {
   gsap.to('body', {
@@ -35,39 +38,34 @@ function changeColor(color) {
 }
 
 
-// INITAL SOCIAL ICONS FOR BACKGROUND IN A STAGGER MODE
-function initSocialIcons() {
-  staggerOpacity(gsap, "social-icons", "a")
-}
+/*//////////////////////////////////////////////
+Functions in Order
+*///////////////////////////////////////////////
 
+/*//////////////////////////////////////////////
+Scrolling animations Logos
+*///////////////////////////////////////////////
 
-
-// INITAL MAXI LOGOS FOR BACKGROUND
 function initLogos() {
-  var logos = gsap.timeline({defaults: {duration: 2, delay: 1} });
+
+  var logos = gsap.timeline({ defaults: { duration: 2, delay: 1 } });
+
   logos
     .to(".img-logo", { autoAlpha: 1, y: 0 })
     .to(".scroll", { autoAlpha: 1 })
     .to(".name-logo", { autoAlpha: 1, x: 0 })
     .to(".title", { autoAlpha: 1 })
+
 }
 
 
-
-
-
-
 /*//////////////////////////////////////////////
-END
-*///////////////////////////////////////////////
-
-
-/*//////////////////////////////////////////////
-HOME SECTION
+Scrolling animations in Home section
 *///////////////////////////////////////////////
 
 function homeBackground() {
-  var home = gsap.timeline({defaults: {duration: 10} });
+
+  var home = gsap.timeline({ defaults: { duration: 10 } });
 
   home
     .to("#particles-home , .home-section", { autoAlpha: 1 })
@@ -83,16 +81,12 @@ function homeBackground() {
     .to("#moon", { autoAlpha: 1 })
     .to(".home-section, .navbar, #particles-home", { autoAlpha: 0 })
 
-
-  // TYPED TEXT IN BACKGROUND SECTION
   var typed = new Typed("#text", {
     strings: ["technology", "design", "programming", "development", "education"],
     typeSpeed: 150,
     loop: true,
     loopCount: Infinity,
   });
-
-
 
   ScrollTrigger.create({
     animation: home,
@@ -102,30 +96,21 @@ function homeBackground() {
     scrub: 4,
     pin: ".home-section",
     onEnter: () => changeColor("black"),
-    onLeave: () => changeColor("black"),
+    onLeave: () => changeColor("red"),
     onLeaveBack: () => changeColor("black"),
     onEnterBack: () => changeColor("black"),
-  }
+  },
   )
-
 }
 
 
-
 /*//////////////////////////////////////////////
-END
-*///////////////////////////////////////////////
-
-
-
-
-/*//////////////////////////////////////////////
-HERO SECTION
+Scrolling animations in Hero section
 *///////////////////////////////////////////////
 
 function appearHero() {
 
-  var hero = gsap.timeline({defaults: {duration: 10} });
+  var hero = gsap.timeline({ defaults: { duration: 10 } });
 
   ScrollTrigger.create({
     animation: hero,
@@ -152,19 +137,18 @@ function appearHero() {
     .to(".profile", { filter: "blur(100px)", autoAlpha: 0 })
     .to(".subtitle", { autoAlpha: 0 })
     .to(".hero-section, #particles-hero", { autoAlpha: 0 })
+
 }
 
-/*//////////////////////////////////////////////
-END
-*///////////////////////////////////////////////
 
 
 /*//////////////////////////////////////////////
-SKILLS SECTION
+Scrolling animations in Skills section
 *///////////////////////////////////////////////
 
 function appearSkills() {
-  var skillsAnim = gsap.timeline({defaults: {duration: 10} });
+
+  var skillsAnim = gsap.timeline({ defaults: { duration: 10 } });
 
   ScrollTrigger.create({
     animation: skillsAnim,
@@ -174,12 +158,11 @@ function appearSkills() {
     scrub: 4,
     pin: ".skills-section",
     onEnter: () => changeColor(blue),
-    onLeave: () => changeColor(blue),
-    onLeaveBack: () => changeColor(blue),
+    onLeave: () => changeColor(red),
+    onLeaveBack: () => changeColor(red),
     onEnterBack: () => changeColor(blue),
   },
   )
-
 
   var skillstext = new Typed("#skills-text", {
     strings: ["My special technical skills...", "You can download my CV for more"],
@@ -187,10 +170,10 @@ function appearSkills() {
     loop: true,
   });
 
-
   skillsAnim
-    .to(".skills-section", { opacity: 1 })
+    .to(".skills-section", { autoAlpha: 1 }, "<")
     .to("#particles-skills", { autoAlpha: 1 })
+    .to(".skills-section", { background: "linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%)" })
     .to(".spaceship", { autoAlpha: 1 })
     .to(".spaceship", {
       keyframes: {
@@ -218,33 +201,30 @@ function appearSkills() {
     .to(".spaceship", { scale: 0 })
     .to(".skills-title", { autoAlpha: 0, }, "+=10")
   staggerOpacity(skillsAnim, "cards", "div");
-  skillsAnim.to(".skills-section, #particles-skills", { autoAlpha: 0 })
-
+  skillsAnim
+    .to(".skills-section, #particles-skills", { autoAlpha: 0 })
 
 }
 
-/*//////////////////////////////////////////////
-END
-*///////////////////////////////////////////////
-
 
 /*//////////////////////////////////////////////
-WORK SECTION
+Scrolling animations in Work section
 *///////////////////////////////////////////////
+
 function appearWork() {
 
-  var work = gsap.timeline({defaults: {duration: 10} });
+  var work = gsap.timeline({ defaults: { duration: 10 } });
 
   ScrollTrigger.create({
     animation: work,
     trigger: '.work-section',
     start: "center center",
     scrub: 4,
-    pin: true,
+    pin: '.work-section',
     end: "bottom -3000%",
     onEnter: () => changeColor(red),
-    onLeave: () => changeColor(red),
-    onLeaveBack: () => changeColor(red),
+    onLeave: () => changeColor(blue),
+    onLeaveBack: () => changeColor(blue),
     onEnterBack: () => changeColor(red),
   },
   )
@@ -255,45 +235,32 @@ function appearWork() {
     loop: true,
   });
 
-
-
   work
-    .to(".work-section", { opacity: 1, })
+    .to(".work-section", { autoAlpha: 1, }, "<")
     .to("#particles-work", { autoAlpha: 1 })
     .to(".work-title", { autoAlpha: 1, }, "+=10")
     .to(".work-title", { autoAlpha: 1, }, "+=10")
     .to(".work-title", { autoAlpha: 0, }, "+=10")
     .to(".work-img-block, .work-text-block", { autoAlpha: 1 })
-
-
     .to("#work-block1", { y: 0 })
     .to("#work-block1", { y: 0, display: 'none' }, "+=1")
-
     .to("#work-block2", { y: 0, display: 'flex' })
     .from("#work-img2", { x: 200, autoAlpha: 0 }, "<")
     .to("#work-block2", { y: 0, display: 'none' }, "+=1")
-
     .to("#work-block3", { y: 0, display: 'flex' })
     .from("#work-img3", { x: 200, autoAlpha: 0 }, "<")
-
     .to(".work-section, #particles-work", { autoAlpha: 0 })
-
-
-  // '<' symbole means start at the same time as the previous tween, no matter if you change the duration.
 
 }
 
-/*//////////////////////////////////////////////
-END
-*///////////////////////////////////////////////
-
 
 /*//////////////////////////////////////////////
-CONTACT
+Scrolling animations in contact section
 *///////////////////////////////////////////////
 
 function appearContact() {
-  var contact = gsap.timeline({defaults: {duration: 10} });
+
+  var contact = gsap.timeline({ defaults: { duration: 10 } });
 
   ScrollTrigger.create({
     animation: contact,
@@ -303,13 +270,12 @@ function appearContact() {
     scrub: 4,
     pin: ".contact-section",
     onEnter: () => changeColor(blue),
-    onLeave: () => changeColor(blue),
-    onLeaveBack: () => changeColor(blue),
+    onLeave: () => changeColor(red),
+    onLeaveBack: () => changeColor(red),
     onEnterBack: () => changeColor(blue),
   },
   )
 
-  // TYPED TEXT IN BACKGROUND SECTION
   var contactText = new Typed("#form-text", {
     strings: ["Get in touch", "We can create great projects", "Do you have any question?"],
     typeSpeed: 150,
@@ -319,10 +285,10 @@ function appearContact() {
     cursorChar: '_',
   });
 
-
   contact
-    .to(".contact-section", { opacity: 1, })
+    .to(".contact-section", { autoAlpha: 1, }, "<")
     .to("#particles-contact", { autoAlpha: 1 })
+    .to(".contact-section", { background: "linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%)" })
     .to(".contact-form, .contact-map", { autoAlpha: 1, })
   staggerOpacity(contact, "form", ".label-box");
   contact
@@ -332,29 +298,19 @@ function appearContact() {
   contact
     .to(".scroll", { autoAlpha: 0 })
 
-
-
-
 }
 
 
-
-
 /*//////////////////////////////////////////////
-END
+Master Functionality
 *///////////////////////////////////////////////
 
-
-/*//////////////////////////////////////////////
-MASTER FUNCTIONALITY
-*///////////////////////////////////////////////
-gsap.to(".preloader-container", { autoAlpha: 0}, "+=12");
-gsap.delayedCall(10, main);
+gsap.to(".preloader-container", { autoAlpha: 0 }, "+=12");
+gsap.delayedCall(10, main); //Main Function will start after 10 seconds
 
 
-function main(){
+function main() {
   initLogos()
-  initSocialIcons()
   homeBackground()
   appearHero()
   appearSkills()
@@ -362,8 +318,9 @@ function main(){
   appearContact()
 }
 
-
-
+/*//////////////////////////////////////////////
+Cursor Functionality
+*///////////////////////////////////////////////
 
 const cursor = document.querySelector(".cursor");
 document.body.addEventListener("mousemove", ({ clientX, clientY }) => {

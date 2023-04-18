@@ -10,11 +10,6 @@ Contact Section
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    background: rgb(96, 23, 103);
-    background: -moz-linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%);
-    background: -webkit-linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%);
-    background: linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#601767", endColorstr="#020236", GradientType=1);
 }
 
 /* ////////////////////////////
@@ -66,7 +61,7 @@ Form
     top: 0;
     left: 0;
     padding: 0.5rem 0;
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: white;
     pointer-events: none;
     transition: .5s;
@@ -148,13 +143,17 @@ Footer
 .footer-icons p {
     font-family: var(--mulish);
     color: white;
-    font-size: 0.7rem;
-    padding-bottom: 1rem;
+    font-size: 0.8rem;
     opacity: 0;
 }
 
 .footer-icons a {
     z-index: 9999;
+}
+
+.footer-icons i {
+    padding: 0.5rem;
+    color: white;
 }
 
 .footer-logo {
@@ -179,4 +178,57 @@ Map
     width: 100%;
     height: 100vh;
     transition: 1.5s;
+}
+
+/* Cuando la pantalla es menor a 700px la dirección de los items flex va a ser uno bajo al otro */
+@media screen and (max-width: 700px) {
+
+    .contact-section {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact-form {
+        height: 75vh;
+        width: 100%;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .form-title {
+        font-size: 1rem;
+        padding: 2em;
+    }
+
+    .label-box input {
+        font-size: 0.6rem;
+        padding: 0.4rem 0;
+    }
+    
+    .label-box label {
+        padding: 0.4rem 0;
+        font-size: 0.6rem;
+    }
+    
+    .error-msg {
+        font-size: 0.5rem;
+    }
+
+    .send-btn {
+        margin-top: 0.8rem;
+        padding: 0.6rem;
+    }
+
+    .footer-icons {
+        font-size: 0.8rem;
+        margin-top: 3rem;
+    }
+
+    .contact-map {
+        height: 25vh;
+        width: 100%;
+    }
+
+    .contact-map>iframe {
+        height: 25vh;
+    }
 }

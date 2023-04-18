@@ -19,7 +19,6 @@ Main Rules
     padding: 0;
     box-sizing: border-box;
     cursor: none;
-    overflow-x: hidden;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

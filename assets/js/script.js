@@ -23,13 +23,31 @@ const blue = "#020236"
 General Functions
 *///////////////////////////////////////////////
 
-// APPEAR with opacity FUNCTION
+//Function to verify the device screen, if is mobile the end is going to change the velocity of the scroll
+function responsive() {
+  const isMobile = window.matchMedia("(max-width: 700px)").matches;
+
+  if (isMobile) {
+    const endScreen = "bottom -1000%"
+    document.body.style.overflowX = "hidden";
+    document.documentElement.style.overflowX = "hidden";
+    return endScreen;
+  } else {
+    const endScreen = "bottom -3000%"
+    return endScreen;
+  }
+}
+
+
+
+// Appear with Opacity in Stagger ( one by one)
 function staggerOpacity(animation, fatherClass, sonClass) {
   animation.set("." + fatherClass, { autoAlpha: 1 })
   animation.from("." + fatherClass + " " + sonClass, { autoAlpha: 0, duration: 4, stagger: 2 })
   animation.to("." + fatherClass + " " + sonClass, { autoAlpha: 1, duration: 4, stagger: 2 })
 }
 
+// Change color of the body
 function changeColor(color) {
   gsap.to('body', {
     backgroundColor: color,
@@ -92,7 +110,7 @@ function homeBackground() {
     animation: home,
     trigger: ".home-section",
     start: "center center",
-    end: "bottom -3000%",
+    end: () => responsive(),
     scrub: 4,
     pin: ".home-section",
     onEnter: () => changeColor("black"),
@@ -116,7 +134,7 @@ function appearHero() {
     animation: hero,
     trigger: ".hero-section",
     start: "center center",
-    end: "bottom -3000%",
+    end: () => responsive(),
     scrub: 4,
     pin: ".hero-section",
     onEnter: () => changeColor(red),
@@ -154,7 +172,7 @@ function appearSkills() {
     animation: skillsAnim,
     trigger: ".skills-section",
     start: "center center",
-    end: "bottom -3000%",
+    end: () => responsive(),
     scrub: 4,
     pin: ".skills-section",
     onEnter: () => changeColor(blue),
@@ -219,9 +237,9 @@ function appearWork() {
     animation: work,
     trigger: '.work-section',
     start: "center center",
+    end: () => responsive(),
     scrub: 4,
     pin: '.work-section',
-    end: "bottom -3000%",
     onEnter: () => changeColor(red),
     onLeave: () => changeColor(blue),
     onLeaveBack: () => changeColor(blue),
@@ -266,7 +284,7 @@ function appearContact() {
     animation: contact,
     trigger: ".contact-section",
     start: "center center",
-    end: "bottom -3000%",
+    end: () => responsive(),
     scrub: 4,
     pin: ".contact-section",
     onEnter: () => changeColor(blue),

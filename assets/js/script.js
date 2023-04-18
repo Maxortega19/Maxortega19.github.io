@@ -183,7 +183,7 @@ function appearSkills() {
   )
 
   var skillstext = new Typed("#skills-text", {
-    strings: ["A showcase of my technical skills...", "Strong proficiency in web development using technologies such as HTML5, CSS3, and JavaScript to create appealing and functional websites", "Experience in programming with multiple languages like Python and Java with the ability to develop innovative and efficient solutions" , "Extensive experience in designing and managing databases, including MySQL" , "Skills in using popular frameworks and libraries such as React and Bootstrap, for building modern and responsive user interfaces", "Familiarity with agile development methodologies, such as Scrum and Kanban, for efficient and collaborative web development project management","You can download my CV for more"],
+    strings: ["A showcase of my technical skills...", "Strong proficiency in web development using technologies such as HTML5, CSS3, and JavaScript to create appealing and functional websites", "Experience in programming with multiple languages like Python and Java with the ability to develop innovative and efficient solutions", "Extensive experience in designing and managing databases, including MySQL", "Skills in using popular frameworks and libraries such as React and Bootstrap, for building modern and responsive user interfaces", "Familiarity with agile development methodologies, such as Scrum and Kanban, for efficient and collaborative web development project management", "You can download my CV for more"],
     typeSpeed: 100,
     loop: true,
   });
@@ -286,7 +286,7 @@ function appearContact() {
     start: "center center",
     end: () => responsive(),
     scrub: 4,
-    pin: ".contact-section",
+    pin: true,
     onEnter: () => changeColor(blue),
     onLeave: () => changeColor(red),
     onLeaveBack: () => changeColor(red),
@@ -294,21 +294,34 @@ function appearContact() {
   },
   )
 
-  var contactText = new Typed("#form-text", {
-    strings: ["Get in touch", "We can create great projects", "Do you have any question?"],
-    typeSpeed: 150,
-    backSpeed: 0,
-    fadeOut: true,
-    loop: true,
-    cursorChar: '_',
-  });
+  if (window.matchMedia("(min-width: 700px)").matches) {
+    var contactText = new Typed("#form-text", {
+      strings: ["Get in touch", "We can create great projects", "Do you have any question?"],
+      typeSpeed: 150,
+      backSpeed: 0,
+      fadeOut: true,
+      loop: true,
+      cursorChar: '_',
+    });
+  } 
+  else{
+    var contactText = new Typed("#form-text", {
+      strings: ["Get in touch"],
+      typeSpeed: 150,
+      backSpeed: 0,
+      loop: false,
+      cursorChar: '_',
+    });
+  }
 
   contact
     .to(".contact-section", { autoAlpha: 1, }, "<")
     .to("#particles-contact", { autoAlpha: 1 })
     .to(".contact-section", { background: "linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%)" })
     .to(".contact-form, .contact-map", { autoAlpha: 1, })
-  staggerOpacity(contact, "form", ".label-box");
+    if (window.matchMedia("(min-width: 700px)").matches) {
+      staggerOpacity(contact, "form", ".label-box");
+    } 
   contact
     .to(".send-btn", { autoAlpha: 1 })
     .to(".footer-icons > p , .footer-logo", { autoAlpha: 1 })

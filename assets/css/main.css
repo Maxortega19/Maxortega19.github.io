@@ -20,6 +20,7 @@ Main Rules
     box-sizing: border-box;
     cursor: none;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

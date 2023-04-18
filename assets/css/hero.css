@@ -93,18 +93,18 @@ MediaQueries screen less than 700px
     .hero-picture {
         order: 2;
         padding: 0;
-        height: 50vh;
+        height: 35vh;
         width: 100%;
     }
 
     .hero-description {
         width: 100%;
-        height: 50vh;
+        height: 65vh;
         /* overflow-y: hidden; */
     }
 
     .profile {
-        width: 100%;
+        width: 80%;
         height: 100%;
     }
 
@@ -112,8 +112,7 @@ MediaQueries screen less than 700px
         background: transparent;
         margin: 1rem 1rem;
         padding: 2rem 2rem;
-        font-size: 0.5rem;
-        height: 100%;
+        font-size: 0.6rem;
         /* overflow-y: hidden; */
     }
 

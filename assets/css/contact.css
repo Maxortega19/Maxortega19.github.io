@@ -196,8 +196,14 @@ MediaQueries screen less than 700px
     .contact-form {
         height: 100vh;
         width: 100%;
-        padding: 1rem 3rem;
+        padding: 2rem 2rem;
     }
+
+    .form-title {
+        font-size: 0.8rem;
+    }
+
+ 
 
     .contact-map {
         display: none;

@@ -183,8 +183,8 @@ function appearSkills() {
   )
 
   var skillstext = new Typed("#skills-text", {
-    strings: ["My special technical skills...", "You can download my CV for more"],
-    typeSpeed: 50,
+    strings: ["A showcase of my technical skills...", "Strong proficiency in web development using technologies such as HTML5, CSS3, and JavaScript to create appealing and functional websites", "Experience in programming with multiple languages like Python and Java with the ability to develop innovative and efficient solutions" , "Extensive experience in designing and managing databases, including MySQL" , "Skills in using popular frameworks and libraries such as React and Bootstrap, for building modern and responsive user interfaces", "Familiarity with agile development methodologies, such as Scrum and Kanban, for efficient and collaborative web development project management","You can download my CV for more"],
+    typeSpeed: 100,
     loop: true,
   });
 
@@ -248,7 +248,7 @@ function appearWork() {
   )
 
   var worktext = new Typed("#work-text", {
-    strings: ["Here are some of my works...", "They are developed with a lot of effort!"],
+    strings: ["Explore my online portfolio...", "Here you'll find a selection of my web development projects", "From dynamic web applications to responsive websites"],
     typeSpeed: 50,
     loop: true,
   });

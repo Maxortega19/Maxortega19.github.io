@@ -369,3 +369,20 @@ Animations
   }
 
 
+
+/* ////////////////////////////
+MediaQueries screen less than 450px
+///////////////////////////////*/
+
+@media screen and (max-width: 450px) {
+
+    * {
+        cursor: default;
+    }
+    
+   .cursor{
+    display: none;
+   }
+
+  }
+

@@ -92,7 +92,11 @@ Skills Cards
     text-align: center;
 }
 
- /* Cuando la pantalla es menor a 700px la dirección de los items flex va a ser uno bajo al otro */
+
+/* ////////////////////////////
+MediaQueries screen less than 700px
+///////////////////////////////*/
+
  @media screen and (max-width: 700px) {
 
     .skills-title {

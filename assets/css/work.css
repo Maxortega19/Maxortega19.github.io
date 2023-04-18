@@ -210,6 +210,7 @@ MediaQueries screen less than 700px
         height: 100%;
         margin-bottom: 1.5rem;
         margin-right: 0;
+        overflow-y: hidden;
     }
 
 }

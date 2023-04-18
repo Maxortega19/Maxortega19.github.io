@@ -74,6 +74,7 @@ Preloader Section
     min-height: 100vh;
     background-color: black;
     z-index: 9998;
+    overflow-y: hidden;
 }
 
 .preloader-container svg {
@@ -105,6 +106,7 @@ Particles Options
     height: 100%;
     z-index: 9999;
     opacity: 0;
+    overflow-y: hidden;
 }
 
 

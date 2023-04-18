@@ -166,7 +166,7 @@ function appearSkills() {
 
   var skillstext = new Typed("#skills-text", {
     strings: ["My special technical skills...", "You can download my CV for more"],
-    typeSpeed: 3,
+    typeSpeed: 50,
     loop: true,
   });
 
@@ -231,7 +231,7 @@ function appearWork() {
 
   var worktext = new Typed("#work-text", {
     strings: ["Here are some of my works...", "They are developed with a lot of effort!"],
-    typeSpeed: 3,
+    typeSpeed: 50,
     loop: true,
   });
 

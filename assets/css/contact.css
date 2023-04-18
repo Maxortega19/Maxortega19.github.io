@@ -196,6 +196,7 @@ MediaQueries screen less than 700px
         height: 75vh;
         width: 100%;
         padding: 0.5rem 1.5rem;
+        overflow-y: hidden;
     }
 
     .form-title {
@@ -230,6 +231,7 @@ MediaQueries screen less than 700px
     .contact-map {
         height: 25vh;
         width: 100%;
+        overflow-y: hidden;
     }
 
     .contact-map>iframe {

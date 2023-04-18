@@ -79,46 +79,47 @@ Description
 }
 
 
-/* ////////////////////////////
-MediaQueries screen less than 700px
-///////////////////////////////*/
-
+/* Cuando la pantalla es menor a 700px la dirección de los items flex va a ser uno bajo al otro */
 @media screen and (max-width: 700px) {
 
     .hero-section {
         flex-direction: column;
-        justify-content: start;
-        align-items: start;
+        justify-content: center;
     }
 
     .hero-picture {
+        order: 2;
         padding: 0;
-        height: 0;
+        height: 50vh;
         width: 100%;
     }
 
     .hero-description {
         width: 100%;
-        height: 100vh;
+        height: 50vh;
         overflow-y: hidden;
     }
 
     .profile {
-        height: 100vh;
+        width: 100%;
+        height: 100%;
     }
 
     .subtitle {
         background: transparent;
         margin: 1rem 1rem;
         padding: 2rem 2rem;
-        font-size: 0.7rem;
-        height: 50vh;
+        font-size: 0.5rem;
+        height: 100%;
+        overflow-y: hidden;
     }
 
     .hello-msg {
         font-size: 1.5rem;
     }
 
-
+    .link {
+        position: relative;
+    }
 
 }

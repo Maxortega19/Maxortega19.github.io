@@ -19,7 +19,7 @@ Main Rules
     padding: 0;
     box-sizing: border-box;
     cursor: none;
-    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -378,7 +378,9 @@ MediaQueries screen less than 450px
 
     * {
         cursor: default;
-        overflow-x: hidden;
+    }
+
+    div{
         overflow-y: hidden;
     }
 

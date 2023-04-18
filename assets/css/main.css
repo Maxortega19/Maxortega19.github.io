@@ -380,10 +380,6 @@ MediaQueries screen less than 450px
         cursor: default;
     }
 
-    div{
-        overflow-y: hidden;
-    }
-
     .cursor {
         display: none;
     }

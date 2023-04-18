@@ -99,7 +99,8 @@ MediaQueries screen less than 700px
 
     .hero-description {
         width: 100%;
-        height: 50vh;
+        height: 100vh;
+        overflow-y: hidden;
     }
 
     .profile {

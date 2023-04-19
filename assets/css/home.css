@@ -3,8 +3,8 @@ Home Section
 //////////////////////////////*/
 
 .home-section {
-    position: relative;
     width: 100%;
+    position: relative;
     min-height: 100vh;
     height: 100vh;
     display: flex;

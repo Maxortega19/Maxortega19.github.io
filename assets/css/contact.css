@@ -188,21 +188,17 @@ MediaQueries screen less than 700px
 @media screen and (max-width: 700px) {
 
     .contact-section {
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     }
 
     .contact-form {
-        height: 100vh;
-        width: 100%;
         padding: 2rem 2rem;
     }
 
     .form-title {
         font-size: 0.8rem;
     }
-
- 
 
     .contact-map {
         display: none;

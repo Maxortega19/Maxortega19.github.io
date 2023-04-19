@@ -9,6 +9,8 @@ gsap.defaults({
   duration: 2
 });
 
+ScrollTrigger.config( {syncInterval: 999999999});
+
 // This allow me to use the vh vw in the script
 const vw = (coef) => window.innerWidth * (coef / 100);
 const vh = (coef) => window.innerHeight * (coef / 100);

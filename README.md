@@ -48,8 +48,9 @@
 
 <div style="color: #FFFFFF;" align="left">
 
-| darkred  | #800E1F |
+| Style  | Description |
 | ------------- |:-------------:|
+| darkred  | #800E1F |
 | red      | #F81E44     |
 | blue      | #111574     |
 | purple      | #601767     |

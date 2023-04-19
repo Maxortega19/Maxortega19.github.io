@@ -31,8 +31,6 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
     background-color: black;
-    width: 100vw; /* 100% del ancho del viewport */
-    height: 100vh; /* 100% de la altura del viewport */
 }
 
 img {

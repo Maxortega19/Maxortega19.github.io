@@ -11,11 +11,11 @@ gsap.defaults({
 
 
 //Config for mobile to focus and scroll issue with the keyboard in the form
-addEventListener("load", function() {
+addEventListener("load", function () {
   var viewport = document.querySelector("meta[name=viewport]");
   viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight);
 })
-ScrollTrigger.config( {syncInterval: 999999999});
+ScrollTrigger.config({ syncInterval: 999999999 });
 
 // This allow me to use the vh vw in the script
 const vw = (coef) => window.innerWidth * (coef / 100);
@@ -311,8 +311,8 @@ function appearContact() {
       loop: true,
       cursorChar: '_',
     });
-  } 
-  else{
+  }
+  else {
     var contactText = new Typed("#form-text", {
       strings: ["Get in touch"],
       typeSpeed: 150,
@@ -325,11 +325,12 @@ function appearContact() {
   contact
     .to(".contact-section", { autoAlpha: 1, }, "<")
     .to("#particles-contact", { autoAlpha: 1 })
-    .to(".contact-section", { background: "linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%)" })
     .to(".contact-form, .contact-map", { autoAlpha: 1, })
-    if (window.matchMedia("(min-width: 700px)").matches) {
-      staggerOpacity(contact, "form", ".label-box");
-    }
+  if (window.matchMedia("(min-width: 700px)").matches) {
+    contact
+      .to(".contact-section", { background: "linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%)" })
+    staggerOpacity(contact, "form", ".label-box");
+  }
   contact
     .to(".send-btn", { autoAlpha: 1 })
     .to(".footer-icons > p , .footer-logo", { autoAlpha: 1 })

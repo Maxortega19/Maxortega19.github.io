@@ -296,7 +296,7 @@ function appearContact() {
     start: "center center",
     end: () => responsive(),
     scrub: 4,
-    pin: ".contact-section",
+    pin: true,
     onEnter: () => changeColor(blue),
     onLeave: () => changeColor(red),
     onLeaveBack: () => changeColor(red),
@@ -329,10 +329,9 @@ function appearContact() {
     .to("#particles-contact", { autoAlpha: 1 })
     .to(".contact-section", { background: "linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%)" })
     .to(".contact-form, .contact-map", { autoAlpha: 1, })
-    // if (window.matchMedia("(min-width: 700px)").matches) {
-    //   staggerOpacity(contact, "form", ".label-box");
-    // }
-    staggerOpacity(contact, "form", ".label-box"); //CAMBIO
+    if (window.matchMedia("(min-width: 700px)").matches) {
+      staggerOpacity(contact, "form", ".label-box");
+    }
   contact
     .to(".send-btn", { autoAlpha: 1 })
     .to(".footer-icons > p , .footer-logo", { autoAlpha: 1 })

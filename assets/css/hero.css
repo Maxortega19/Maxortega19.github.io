@@ -5,7 +5,7 @@ Hero Section
 .hero-section {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -100,7 +100,6 @@ MediaQueries screen less than 700px
     .hero-description {
         width: 100%;
         height: 65vh;
-        /* overflow-y: hidden; */
     }
 
     .profile {
@@ -110,10 +109,9 @@ MediaQueries screen less than 700px
 
     .subtitle {
         background: transparent;
-        margin: 0 1rem;
-        padding: 0 2rem;
+        margin: 1rem 1rem;
+        padding: 2rem 2rem;
         font-size: 0.6rem;
-        /* overflow-y: hidden; */
     }
 
     .hello-msg {

@@ -17,6 +17,7 @@ setTimeout(function () {
   let viewport = document.querySelector("meta[name=viewport]");
   viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
 }, 300);
+ScrollTrigger.config( {syncInterval: 999999999});
 
 // This allow me to use the vh vw in the script
 const vw = (coef) => window.innerWidth * (coef / 100);

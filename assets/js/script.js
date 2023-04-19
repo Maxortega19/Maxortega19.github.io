@@ -11,12 +11,10 @@ gsap.defaults({
 
 
 //Config for mobile to focus and scroll issue with the keyboard in the form
-setTimeout(function () {
-  let viewheight = $(window).height();
-  let viewwidth = $(window).width();
-  let viewport = document.querySelector("meta[name=viewport]");
-  viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
-}, 300);
+addEventListener("load", function() {
+  var viewport = document.querySelector("meta[name=viewport]");
+  viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight);
+})
 ScrollTrigger.config( {syncInterval: 999999999});
 
 // This allow me to use the vh vw in the script

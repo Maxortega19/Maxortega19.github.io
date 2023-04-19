@@ -294,10 +294,9 @@ function appearContact() {
     animation: contact,
     trigger: ".contact-section",
     start: "center center",
-    // end: () => responsive(),
-    end: "bottom +=100", //CAMBIO
+    end: () => responsive(),
     scrub: 4,
-    pin: ".contact-section", //CAMBIO
+    pin: ".contact-section",
     onEnter: () => changeColor(blue),
     onLeave: () => changeColor(red),
     onLeaveBack: () => changeColor(red),

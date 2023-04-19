@@ -188,7 +188,6 @@ MediaQueries screen less than 700px
 @media screen and (max-width: 700px) {
 
     .contact-section {
-        flex-direction: column;
         justify-content: space-around;
         align-items: center;
     }

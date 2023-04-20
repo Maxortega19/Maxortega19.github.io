@@ -97,15 +97,15 @@ Skills Cards
 MediaQueries screen less than 700px
 ///////////////////////////////*/
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
 
     .skills-title {
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
         justify-content: space-evenly;
 
     }
 
-    .spaceship {
+    /* .spaceship {
         width: 0.8rem;
         height: 0.3rem;
     }
@@ -116,7 +116,7 @@ MediaQueries screen less than 700px
 
     .container>h4 {
         font-size: 2rem;
-    }
+    } */
 
 
 }

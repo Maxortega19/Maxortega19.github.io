@@ -185,17 +185,17 @@ Map
 MediaQueries screen less than 700px
 ///////////////////////////////*/
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
 
     .contact-form {
         height: 100%;
         width: 100%;
-        padding: 2rem 2rem;
+        /* padding: 2rem 2rem; */
     }
 
-    .form-title {
+    /* .form-title {
         font-size: 0.8rem;
-    }
+    } */
 
     .contact-map {
         display: none;

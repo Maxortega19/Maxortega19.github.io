@@ -33,7 +33,7 @@ General Functions
 
 //Function to verify the device screen, if is mobile the end is going to change the velocity of the scroll
 function responsive() {
-  const isMobile = window.matchMedia("(max-width: 700px)").matches;
+  const isMobile = window.matchMedia("(max-width: 720px)").matches;
 
   if (isMobile) {
     const endScreen = "bottom -1000%"
@@ -78,10 +78,8 @@ function initLogos() {
 
   logos
     .to(".img-logo", { autoAlpha: 1, y: 0 })
-    .to(".scroll", { autoAlpha: 1 })
     .to(".name-logo", { autoAlpha: 1, x: 0 })
     .to(".title", { autoAlpha: 1 })
-
 }
 
 
@@ -94,18 +92,22 @@ function homeBackground() {
   var home = gsap.timeline({ defaults: { duration: 10 } });
 
   home
-    .to("#particles-home , .home-section", { autoAlpha: 1 })
+    .to("#particles-home , .home-section, .scroll-init", { autoAlpha: 1 })
     .to("#building-1", { autoAlpha: 1 })
     .to("#building-2", { autoAlpha: 1 })
-    .to("#building-3", { autoAlpha: 1 })
-    .to("#building-4", { autoAlpha: 1 })
-    .to("#building-5", { autoAlpha: 1 })
-    .to("#building-6", { autoAlpha: 1 })
-    .to("#building-7", { autoAlpha: 1 })
-    .to("#background-buildings", { autoAlpha: 1 })
-    .to("#middle-buildings", { autoAlpha: 1 })
-    .to("#moon", { autoAlpha: 1 })
-    .to(".home-section, .navbar, #particles-home", { autoAlpha: 0 })
+  if (window.matchMedia("(min-width: 720px)").matches) {
+    home
+      .to("#building-3", { autoAlpha: 1 })
+      .to("#building-4", { autoAlpha: 1 })
+      .to("#building-5", { autoAlpha: 1 })
+      .to("#building-6", { autoAlpha: 1 })
+      .to("#building-7", { autoAlpha: 1 })
+      .to("#background-buildings", { autoAlpha: 1 })
+      .to("#middle-buildings", { autoAlpha: 1 })
+      .to("#moon", { autoAlpha: 1 })
+  }
+  home
+    .to(".home-section, .navbar, #particles-home, .scroll-init", { autoAlpha: 0 })
 
   var typed = new Typed("#text", {
     strings: ["technology", "design", "programming", "development", "education"],
@@ -153,7 +155,7 @@ function appearHero() {
   )
 
   hero
-    .to(".hero-section", { autoAlpha: 1 }, "<")
+    .to(".hero-section, .scroll", { autoAlpha: 1 }, "<")
     .to("#particles-hero", { autoAlpha: 1 })
     .to(".profile", { filter: "blur(100px)", autoAlpha: 0, })
     .to(".profile", { filter: "blur(0px)", autoAlpha: 1, })
@@ -302,7 +304,7 @@ function appearContact() {
   },
   )
 
-  if (window.matchMedia("(min-width: 700px)").matches) {
+  if (window.matchMedia("(min-width: 720px)").matches) {
     var contactText = new Typed("#form-text", {
       strings: ["Get in touch", "We can create great projects", "Do you have any question?"],
       typeSpeed: 150,
@@ -326,7 +328,7 @@ function appearContact() {
     .to(".contact-section", { autoAlpha: 1, }, "<")
     .to("#particles-contact", { autoAlpha: 1 })
     .to(".contact-form, .contact-map", { autoAlpha: 1, })
-  if (window.matchMedia("(min-width: 700px)").matches) {
+  if (window.matchMedia("(min-width: 720px)").matches) {
     contact
       .to(".contact-section", { background: "linear-gradient(90deg, rgba(96, 23, 103, 1) 0%, rgba(2, 2, 54, 1) 50%)" })
     staggerOpacity(contact, "form", ".label-box");

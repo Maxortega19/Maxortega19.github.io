@@ -86,7 +86,7 @@ Description
 MediaQueries screen less than 700px
 ///////////////////////////////*/
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
 
     .hero-section {
         flex-direction: column;
@@ -114,14 +114,14 @@ MediaQueries screen less than 700px
 
     .subtitle {
         background: transparent;
-        margin: 1rem 1rem;
+        /* margin: 1rem 1rem;
         padding: 1.5rem 1.5rem;
-        font-size: 0.6rem;
+        font-size: 0.6rem; */
     }
 
-    .hello-msg {
+    /* .hello-msg {
         font-size: 1.5rem;
-    }
+    } */
 
     .link {
         position: relative;

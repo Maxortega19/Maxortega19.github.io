@@ -128,6 +128,18 @@ Scroll
     opacity: 0;
 }
 
+.scroll-init {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 1rem;
+    font-family: 'Space Mono';
+    font-size: 0.6rem;
+    color: white;
+    text-align: center;
+    z-index: 9997;
+}
 
 .fa-chevron-up {
     padding: 0.5rem;
@@ -382,8 +394,22 @@ MediaQueries screen less than 450px
         cursor: default;
     }
 
+    html{
+        font-size: 12px;
+    }
+
     .cursor {
         display: none;
     }
 
+}
+
+/* ////////////////////////////
+MediaQueries screen less than 720px
+///////////////////////////////*/
+
+@media screen and (max-width: 720px) {
+    html{
+        font-size: 14px;
+    }
 }

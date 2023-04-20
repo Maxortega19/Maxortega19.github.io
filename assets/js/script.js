@@ -36,7 +36,7 @@ function responsive() {
   const isMobile = window.matchMedia("(max-width: 720px)").matches;
 
   if (isMobile) {
-    const endScreen = "bottom -1000%"
+    const endScreen = "bottom -750%"
     document.body.style.overflowX = "hidden";
     document.documentElement.style.overflowX = "hidden";
     return endScreen;

@@ -395,7 +395,7 @@ MediaQueries screen less than 450px
     }
 
     html{
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .cursor {
@@ -410,6 +410,6 @@ MediaQueries screen less than 720px
 
 @media screen and (max-width: 720px) {
     html{
-        font-size: 14px;
+        font-size: 12px;
     }
 }

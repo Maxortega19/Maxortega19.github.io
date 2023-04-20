@@ -115,7 +115,7 @@ MediaQueries screen less than 700px
     .subtitle {
         background: transparent;
         margin: 1rem 1rem;
-        padding: 2rem 2rem;
+        padding: 1.5rem 1.5rem;
         font-size: 0.6rem;
     }
 

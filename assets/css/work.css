@@ -187,7 +187,7 @@ MediaQueries screen less than 700px
     .work-text-block {
         width: 80%;
         height: 100%;
-        margin-top: 1.5rem;
+        margin-top: 5rem;
         margin-left: 0;
     }
 
@@ -208,9 +208,8 @@ MediaQueries screen less than 700px
     .work-img-block {
         width: 80%;
         height: 100%;
-        margin-bottom: 1.5rem;
+        margin-bottom: 5rem;
         margin-right: 0;
-        /* overflow-y: hidden; */
     }
 
 }

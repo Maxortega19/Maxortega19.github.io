@@ -394,22 +394,8 @@ MediaQueries screen less than 450px
         cursor: default;
     }
 
-    html{
-        font-size: 10px;
-    }
-
     .cursor {
         display: none;
     }
 
-}
-
-/* ////////////////////////////
-MediaQueries screen less than 720px
-///////////////////////////////*/
-
-@media screen and (max-width: 720px) {
-    html{
-        font-size: 12px;
-    }
 }

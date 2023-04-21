@@ -179,10 +179,10 @@ MediaQueries screen less than 700px
         justify-content: center;
         align-items: center;
     }
-/* 
+
     .work-title {
         font-size: 1.5rem;
-    } */
+    }
 
     .work-text-block {
         width: 80%;
@@ -191,19 +191,19 @@ MediaQueries screen less than 700px
         margin-left: 0;
     }
 
-    /* .work-text-content {
+    .work-text-content {
         padding: 0 1rem;
-    } */
+    }
 
-    /* .work-text-content h3 {
+    .work-text-content h3 {
         font-size: 1.5rem;
         line-height: 2rem;
-    } */
+    }
 
-    /* .work-text-content p {
+    .work-text-content p {
         font-size: 0.6rem;
         line-height: 1.2rem;
-    } */
+    }
 
     .work-img-block {
         width: 80%;

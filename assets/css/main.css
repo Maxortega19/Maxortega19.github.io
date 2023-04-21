@@ -70,9 +70,6 @@ Preloader Section
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* min-height: 100vh; */
-    /* height: 100vh;
-    background-color: black; */
     background: linear-gradient(-45deg, var(--red), var(--purple) , var(--darkred), var(--blue));
 	background-size: 400% 400%;
 	animation: gradient 5s ease infinite;
@@ -92,8 +89,6 @@ Preloader Section
     stroke-dashoffset: 810;
     animation: offset 9s linear forwards, fill-it 3s 9s forwards;
 }
-
-
 
 
 /*///////////////////////////////
@@ -175,6 +170,8 @@ Animations
 		background-position: 0% 50%;
 	}
 }
+
+/******************************/
 
 @-moz-keyframes bounceUp {
 

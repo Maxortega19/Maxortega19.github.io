@@ -71,8 +71,12 @@ Preloader Section
     justify-content: center;
     width: 100%;
     /* min-height: 100vh; */
-    height: 100vh;
-    background-color: black;
+    /* height: 100vh;
+    background-color: black; */
+    background: linear-gradient(-45deg, var(--red), var(--purple) , var(--darkred), var(--blue));
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+	height: 100vh;
     z-index: 9998;
     overflow-y: hidden;
 }
@@ -159,6 +163,18 @@ Scroll
 /* ////////////////////////////
 Animations
 ///////////////////////////////*/
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
 @-moz-keyframes bounceUp {
 

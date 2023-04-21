@@ -5,7 +5,7 @@ Hero Section
 .hero-section {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -112,7 +112,7 @@ MediaQueries screen less than 700px
         background: transparent;
         margin: 1.5rem 1rem 0rem 1rem;
         padding: 1.5rem 1.5rem;
-        font-size: 0.6rem;
+        font-size: 0.5rem;
     }
 
     .hello-msg {

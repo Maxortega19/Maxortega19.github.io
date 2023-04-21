@@ -5,11 +5,11 @@ Contact Section
 .contact-section {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 /* ////////////////////////////
@@ -137,7 +137,7 @@ Footer
     text-align: center;
     align-items: center;
     font-size: 1rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .footer-icons p {
@@ -154,6 +154,7 @@ Footer
 .footer-icons i {
     padding: 0.5rem;
     color: white;
+    font-size: 1rem;
 }
 
 .footer-logo {
@@ -191,6 +192,10 @@ MediaQueries screen less than 700px
         height: 100%;
         width: 100%;
         padding: 2rem 2rem;
+    }
+
+    .footer-icons {
+        margin-top: 4rem;
     }
 
     .form-title {

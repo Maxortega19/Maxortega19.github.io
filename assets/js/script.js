@@ -334,10 +334,10 @@ function appearContact() {
     staggerOpacity(contact, "form", ".label-box");
   }
   contact
-    .to(".send-btn", { autoAlpha: 1 })
     .to(".footer-icons > p , .footer-logo", { autoAlpha: 1 })
   staggerOpacity(contact, "footer-icons", "a");
   contact
+    .to(".send-btn", { autoAlpha: 1 })
     .to(".scroll", { autoAlpha: 0 })
 
 }

@@ -45,15 +45,15 @@ Cursor
 .cursor {
     position: fixed;
     z-index: 9999;
-    height: 2rem;
-    width: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
     border-radius: 36px;
     background-color: rgba(255, 255, 255, .65);
     box-shadow: 0 0 24px 0 #0000001a, 0 1px 0 0 #0000;
     pointer-events: none;
     transition: all 200ms ease-out;
     left: -1px;
-    top: -1px;
+    top: -3px;
     box-sizing: border-box;
 }
 
@@ -392,6 +392,10 @@ MediaQueries screen less than 450px
 
     * {
         cursor: default;
+    }
+
+    .preloader-container svg {
+        width: 80%;
     }
 
     .cursor {

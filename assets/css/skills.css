@@ -68,6 +68,7 @@ Skills Cards
 
 .card {
     padding: 0.5rem 1rem;
+    z-index: 9999;
 }
 
 .container>h4 {
@@ -75,7 +76,6 @@ Skills Cards
     font-size: 5rem;
     color: white;
     text-align: center;
-    animation: shake 5s ease 0s infinite normal forwards;
 }
 
 .container>p {
@@ -86,10 +86,7 @@ Skills Cards
 }
 
 .container>h4:hover {
-    font-family: var(--space);
-    font-size: 5rem;
-    color: white;
-    text-align: center;
+    animation: shake 5s ease 0s infinite normal forwards;
 }
 
 
@@ -100,7 +97,7 @@ MediaQueries screen less than 700px
 @media screen and (max-width: 720px) {
 
     .skills-title {
-        /* font-size: 1.5rem; */
+        font-size: 1.5rem;
         justify-content: space-evenly;
 
     }
